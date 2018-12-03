@@ -1,0 +1,36 @@
+﻿@model Survey
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script rel="text/javascript" src="~/jquery/js.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <button class="test">Click Me</button>
+  <form asp-action="Post" asp-controller="FirstFormValidation" method="POST">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name"></label>
+    <input asp-for="Name">
+    <span asp-for="Dojo"></span>
+    <select asp-for="Dojo">
+      <option asp-for="Seattle">Seattle</option>
+      <option asp-for="San_jose">San Jose</option>
+      <option asp-for="Chicago">Chicago</option>
+    </select>
+    <span asp-for="Language"></span>
+    <select asp-for="Language">
+      <option asp-for="Python">Python</option>
+      <option asp-for="JavaScript">JavaScript</option>
+      <option asp-for="C_sharp">C#</option>
+    </select>
+    <span asp-for="Comment"></span>
+    <textarea asp-for = "Comment"></textarea>
+    <input type = "submit" value="Submit">
+  </form>
+</body>
+</html>
